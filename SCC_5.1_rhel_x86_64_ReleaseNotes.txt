@@ -1,0 +1,175 @@
+
+ SPAWAR Systems Center Atlantic
+ SCAP Compliance Checker Release Notes                   Jan 28, 2019   09:16:15
+
+ SCAP Compliance Checker 5.1 Features Added
+ ===============================================================================
+ Type     IssueID  Summary
+ -------------------------------------------------------------------------------
+ Feature  29320    Remove all Microsoft Office SCAP content per direction from
+                   DISA, all Office SCAP content is being re-written
+
+ Feature  29300    Update summary reporter, and all post scan reports to use
+                   the SCC GUI progress gauge to indicate percent complete
+
+ Feature  29290    Update progress bar to provide an approximation of percent
+                   complete for local or classic remote SCAP/OVAL scans
+
+ Feature  29253    Update DISA SCAP content based on November 2018 releases
+
+ Feature  29232    Update Windows registry test to exclude profiles older than
+                   user specified days (default 30) from tests using
+                   HKEY_CURRENT_USER
+
+ Feature  29135    Add search/filter to SCC Unlocker form
+
+ Feature  29131    Update OCIL to catch unsaved answers and prompt user to save
+
+ Feature  29130    Add support for new OVAL 5.11 mac OS X launchd_test
+
+ Feature  29122    Update OCIL to add a "Status" column to document partially
+                   complete, or 'complete' OCIL checklists
+
+ Feature  29121    Update OCIL to support populating OCIL tree with resume
+                   results 
+
+ Feature  29118    SCAP 1.2 Tailoring form should verify at least one rule is
+                   selected on "Save Close"
+
+ Feature  29116    SCAP 1.2 Tailoring form should minimize all groups when
+                   opened  
+
+ Feature  29082    Add Content Author Mode in options file and options form
+                   checkbox form
+
+ Feature  29077    Add counter to OCIL form (OCIL Document X of Y)
+
+ Feature  29010    SCAP 1.2 Tailoring: Add feature to prompt user if any
+                   ancestor group is disabled
+
+ Feature  28981    Update SCC to be able to process a SCAP stream with XCCDF
+                   and OCIL only, no OVAL or CPE-OVAL
+
+ Feature  28956    Update delete single content stream to delete all selected
+
+ Feature  28955    Update content installation to support selecting multiple
+                   zips/xml files
+
+ Feature  28948    Add data validation of options.xml based on xsd schema file
+
+ Feature  28825    OVAL 5.11.2: change HPUX trusted item element 'login_tty_u'
+                   datatype to string
+
+ Feature  28813    OVAL 5.11.2: WIN8/WIN2012 audit subcategories in OVAL 5.11
+
+ Feature  28801    OVAL 5.11.2: Rpm Info Item extended_name and '(none)'
+                   architecture.
+
+ Feature  28799    OVAL 5.11.2: Update Windows Password_Test to include new
+                   state and item object LSAAnonymousNameLookup
+
+ Feature  28798    OVAL 5.11.2: Capture the block size in
+                   linux:partition_item/state
+
+ Feature  28797    OVAL 5.11.2: Proposed update to Linux partition_test
+
+ Feature  28790    OVAL 5.11.2: Update registry_probe based on new object
+                   element REG_EXPAND_SZ
+
+ Feature  28783    Add input validation on scc command line (--setOpt)
+
+ Feature  28782    Add input validation on scc CLUI.
+
+ Feature  28571    Add XML schema validation on content modification
+
+ Feature  28114    Add input validation on SCC GUI
+
+ Feature  26648    Update Digital Signature Validation to verify x509 certs
+
+ Feature  26059    Add support for new OVAL 5.11 mac OS X systemprofiler_test
+
+
+
+ SCAP Compliance Checker 5.1 Defects Resolved
+ ===============================================================================
+ Type     IssueID  Summary
+ -------------------------------------------------------------------------------
+ Defect   29282    Improve documentation on how to verify file using RHEL SCC
+                   installation rpm with gpg cert
+
+ Defect   29129    Fix loading of tailoring metadata related to user
+                   organization
+
+ Defect   29096    SCC is creating RPMverifyfile_items for missing/ghost files
+
+ Defect   29092    Fix issue with Raw OCIL Target double-click causes SCC to
+                   crash   
+
+ Defect   29086    Fix issue with Raw OCIL Target select/deselect on single
+                   click   
+
+ Defect   29070    Update OCIL to indicate if data entry question field
+                   requires a Numeric or String answer
+
+ Defect   29066    Fix loading of OCIL results for sub-questions
+
+ Defect   29056    Patch OVAL 5.11.2 schema to prevent validation issues based
+                   on system_profiler data_type
+
+ Defect   29046    Improve Windows domain controller lookup code to prevent
+                   errors on certain networks
+
+ Defect   29041    Update OCIL forms to show benchmarkID instead of confusing
+                   datastream#filepath info
+
+ Defect   29030    Fix SCAP 1.2 Tailoring Refine Value selector
+
+ Defect   29024    Fix issues with Linux 'version' comparisons in the RPMINFO
+                   probe   
+
+ Defect   29018    Improve XCCDF support for adhoc/unexpected metadata elements
+
+ Defect   29016    Windows Registry Probe is not reporting accurately when
+                   32_bit view is enabled
+
+ Defect   29006    Output is saying the the CPE OVAL Results file is being
+                   saved when it is not
+
+ Defect   29005    SCAP 1.2: Update XCCDF/OCIL processing to gracefully handle
+                   when OCIL exists, but no rules are enabled that reference
+                   OCIL    
+
+ Defect   29001    Fix OCIL to correctly display only the questions enabled via
+                   XCCDF Tailoring
+
+ Defect   29000    Fix OCIL to correctly display only the questions enabled in
+                   XCCDF content
+
+ Defect   28999    Fix Windows Cmdlet Probe to handling type Module_Version
+                   correctly
+
+ Defect   28971    Fix directory/logging permission issues on Windows with GUI
+                   WMI based scans, and all platforms if cscc -u is used
+
+ Defect   28962    Updates Windows cmdlet probe in to correctly process
+                   multi-value variables
+
+ Defect   28954    Update OVAL results to include schema references for all
+                   platforms to prevent cross platform content from causing
+                   schema errors
+
+ Defect   28950    Fix erroneous WARN statements on remote Windows 'classic'
+                   mode scans, when the same directory is scanned multiple
+                   times   
+
+ Defect   28942    Update linux rpminfo probe to include filepath
+
+ Defect   28933    SCAP 1.2: OCIL questionnaires SHOULD NOT be used if OVAL can
+                   perform the same check correctly.
+
+ Defect   28738    Update xccdf printing of "processing rule" to determine if
+                   the rule is enabled first
+
+ Defect   28708    Tailoring form: rules not being enabled on the right when
+                   clicked on the left.
+
